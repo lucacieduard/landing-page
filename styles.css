@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	font-family: "Barlow", sans-serif;
+}
+
+/* ----HEADER---- */
+
+header {
+	width: 100%;
+	background-color: #3dbeff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1rem;
+	position: relative;
+	z-index: 7;
+}
+
+.hamburger {
+	cursor: pointer;
+}
+.nav {
+	position: absolute;
+	background-color: white;
+	top: 100%;
+	left: 0;
+	right: 0;
+	width: 90%;
+	text-align: center;
+	margin: 2rem auto 0rem auto;
+	max-height: 0px;
+	overflow: hidden;
+	transition: 0.5s;
+	z-index: 2;
+}
+
+.show-nav {
+	max-height: 400px;
+}
+
+.nav ul {
+	padding: 1.5rem 0;
+}
+
+.nav ul li {
+	padding: 1rem 0;
+}
+
+.nav ul li a {
+	color: hsl(232, 10%, 55%);
+	letter-spacing: 0.2px;
+	font-size: 1.2rem;
+}
+
+#active {
+	padding: 0.7rem 1.5rem;
+	border-radius: 40px;
+	text-transform: uppercase;
+	background-color: hsl(51, 100%, 49%);
+	font-family: "Fraunces";
+	font-size: 1.1rem;
+	color: black;
+	font-weight: 700;
+}
+
+/* .nav::before{
+    content: " ";
+    height: 20px;
+    width:20px;
+    background-color:black;
+    position: absolute;
+    z-index:500;
+    top:0;
+    right: 0;
+    transform: rotate(45deg);
+} */
+
+/* XX  HEADER  XX */
+
+/* ---- HERO ---- */
+
+.hero {
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	padding-bottom: 0;
+}
+
+.hero img {
+	width: 100%;
+	margin-top: -10rem;
+	padding-bottom: 0;
+}
+
+.title {
+	position: absolute;
+	top: 10%;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	font-family: "Fraunces";
+	font-weight: 900;
+	color: white;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+}
+
+.arrow {
+	position: absolute;
+	display: block;
+	width: 100%;
+	text-align: center;
+	bottom: 5%;
+}
+.arrow img {
+	width: 40px;
+	height: 100px;
+	animation-name: arrow;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-direction: alternate;
+}
+
+@keyframes arrow {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
+
+/* ----- MAIN ----- */
+
+.main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: -5px;
+}
+
+.main-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.info {
+	background-color: hsl(0, 0%, 100%);
+	text-align: center;
+	padding: 4rem 1.5rem;
+}
+
+.info h2 {
+	margin-bottom: 2rem;
+	font-size: 2.5rem;
+	font-family: "Fraunces";
+	font-weight: 900;
+	color: hsl(212, 27%, 19%);
+}
+
+.info p {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	color: hsl(232, 10%, 55%);
+	font-family: "Barlow", sans-serif;
+	margin-bottom: 3rem;
+}
+
+.info button {
+	border: none;
+	font-size: 1.2rem;
+	background-color: transparent;
+	color: hsl(212, 27%, 19%);
+	font-family: "Fraunces", sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.main-section:nth-of-type(1) .info button {
+	border-bottom: 5px solid hsl(51, 100%, 49%);
+}
+
+.main-section:nth-of-type(2) .info button {
+	border-bottom: 5px solid hsl(7, 99%, 70%);
+}
+
+/* ---------- */
+
+/* SECTION - TWO */
+
+.second-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	margin-top: -4px;
+}
+
+.item img {
+	width: 100%;
+}
+
+.img-info {
+	position: absolute;
+	bottom: 0;
+	color: hsl(167, 40%, 24%);
+}
+
+.img-info h3 {
+	font-size: 2.4rem;
+	font-family: "Fraunces", sans-serif;
+	font-weight: 900;
+	margin-bottom: 2rem;
+}
+
+.img-info p {
+	font-size: 1.3rem;
+	margin-bottom: 3rem;
+	padding: 0 1rem;
+}
+
+.item:nth-of-type(2) .img-info p {
+	color: hsl(198, 62%, 26%);
+}
+.item:nth-of-type(2) .img-info h3 {
+	color: hsl(198, 62%, 26%);
+}
+
+/* ------ */
+
+/* -- TESTIMONIAL SECTION -- */
+
+.testimonial-section {
+	width: 100%;
+	background-color: hsl(0, 0%, 100%);
+	text-align: center;
+}
+
+.testimonial-section h3 {
+	margin-top: 3.5rem;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	color: hsl(210, 4%, 67%);
+	font-family: "fraunces", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.testimonial {
+	padding: 2rem 1rem;
+}
+
+.testimonial img {
+	border-radius: 50%;
+	width: 85px;
+	margin-bottom: 2rem;
+}
+
+.person-description {
+	font-size: 1.2rem;
+	color: hsl(213, 9%, 39%);
+	line-height: 1.5;
+	letter-spacing: 0.6px;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.person-name {
+	font-size: 1.5rem;
+	color: black;
+	font-family: "Fraunces", sans-serif;
+	font-weight: 900;
+	margin-bottom: 1rem;
+}
+
+.person-job {
+	color: hsl(210, 4%, 67%);
+}
+
+/* ---- */
+
+/* --- Galery --- */
+
+.galery {
+	margin-top: 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+}
+
+.row img {
+	width: 50%;
+}
+
+/* ----- */
+
+/* FOOTER */
+
+
+footer{
+    background-color:#90d4c5;
+    padding:2rem 0;
+    padding-top:4rem;
+    text-align: center;
+    margin-top:-3px;
+}
+
+.logo-footer
+{
+    width:100%;
+}
+
+.logo-footer img{
+    width:50%;
+    color:hsl(212, 27%, 19%);
+}
+
+.footer-text{
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    margin-top:2rem;
+}
+
+.footer-text li a{
+    color:hsl(168, 34%, 41%);
+    font-size: 1.2rem;
+}
+
+.footer-logo{
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    margin-top:4rem;
+    margin-bottom:5rem;
+}
+
+.footer-logo li a img{
+    width:30px;
+}
